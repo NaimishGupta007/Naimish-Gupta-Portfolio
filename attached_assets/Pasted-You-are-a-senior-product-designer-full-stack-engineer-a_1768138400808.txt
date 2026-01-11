@@ -1,0 +1,175 @@
+You are a senior product designer, full-stack engineer, and UX specialist.
+
+Build a production-ready, recruiter-grade personal portfolio website with a strong AI / ML / Research focus.
+
+=====================================================
+CORE IDENTITY
+=====================================================
+Name: Naimish Gupta
+Role: Machine Learning Engineer | Computer Vision Engineer | AI Researcher
+Audience: AI/ML recruiters, research labs, professors, startups, enterprises
+
+=====================================================
+TECH STACK (MANDATORY)
+=====================================================
+Frontend:
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- Framer Motion for subtle animations
+
+Backend:
+- Supabase (PostgreSQL + Auth + Storage)
+- NO custom Express backend
+
+=====================================================
+GLOBAL DESIGN SYSTEM
+=====================================================
+- Clean, modern, research-oriented design
+- Each project/research page must have a theme-based UI
+- Dark + Light mode
+- Mobile responsive
+- SEO optimized
+- No placeholder text anywhere
+
+=====================================================
+SITE STRUCTURE (STRICT)
+=====================================================
+
+1) HOME
+- Hero section with name and role
+- Short professional summary focused on:
+  - AI systems
+  - Computer Vision
+  - Research & patents
+- Call-to-action buttons:
+  - View Projects
+  - View Research
+  - Contact Me
+
+-----------------------------------------------------
+
+2) PROJECTS (SEPARATE SECTION)
+- Projects must be displayed as categorized cards
+- Each project must open a dedicated detail page
+
+Project list (use these exact titles as sample data):
+- ADAS using Deep Learning
+- Aerial Threat Detection and Crowd Dispersion
+- Computer Vision Based Jewellery Try-On Application
+- Cryptanalysis using Machine Learning
+- eDNA Analysis for Taxonomy Prediction
+- Early Disease Detection & Posture Vision
+- Graphing Application for ML Functions
+- Model-Agnostic Learning Method for Threat Detection
+
+Each project detail page MUST include:
+- Problem statement
+- Domain (CV / ML / Security / Research)
+- Tech stack
+- Architecture overview
+- Results & metrics
+- GitHub / Code link
+- Video demo link
+- Theme-specific UI (colors & layout based on domain)
+
+-----------------------------------------------------
+
+3) RESEARCH & PATENTS (SEPARATE SECTION)
+- Research papers and patents must NOT mix with projects
+- Each item opens a detail page
+
+Each research/patent includes:
+- Abstract
+- Problem motivation
+- Methodology
+- Results
+- Publication status (Accepted / Under Review)
+- Patent number (if applicable)
+- Optional PDF link
+
+-----------------------------------------------------
+
+4) EDUCATIONAL CONTENT / BLOGS / DEMOS
+- Dedicated section for:
+  - Educational AI/ML content
+  - Blogs
+  - Project demos
+  - Video links (YouTube / Drive)
+
+Admin can:
+- Create posts
+- Edit posts
+- Add video links
+- Publish / unpublish content
+
+Public users:
+- Can only read published content
+
+-----------------------------------------------------
+
+5) RESUME SECTION (VERY IMPORTANT)
+- Resume library page
+- Admin can upload multiple resumes:
+  - ML Engineer resume
+  - CV Engineer resume
+  - Research-oriented resume
+- Each resume has:
+  - Title
+  - Job role
+  - Download button
+- Store resumes using Supabase Storage
+
+-----------------------------------------------------
+
+6) CONTACT ME (WEB-ONLY MESSAGES)
+- Contact form with:
+  - Name
+  - Email
+  - Message
+- Messages saved to Supabase database
+- NO direct email exposure
+- Admin dashboard to read messages
+- Public users cannot view messages
+
+-----------------------------------------------------
+
+7) ADMIN DASHBOARD
+- Secure admin authentication (Supabase Auth)
+- Admin can:
+  - Manage projects
+  - Manage research & patents
+  - Manage blogs / educational content
+  - Upload & manage resumes
+  - Read contact messages
+
+-----------------------------------------------------
+DATABASE & SECURITY
+-----------------------------------------------------
+- PostgreSQL tables:
+  - projects
+  - research
+  - blogs
+  - videos
+  - resumes
+  - messages
+- Supabase Row Level Security (RLS):
+  - Public: read-only access
+  - Admin: full CRUD access
+
+-----------------------------------------------------
+DELIVERABLES
+-----------------------------------------------------
+- Fully working Next.js app
+- Clean folder structure
+- Supabase SQL schema
+- RLS policies
+- Storage configuration
+- Environment variable setup
+- README with setup instructions
+
+IMPORTANT:
+- Frontend must be FINAL and professional
+- Do NOT use generic portfolio templates
+- Do NOT mix projects and research
+- UX must reflect AI / ML / Research expertise
