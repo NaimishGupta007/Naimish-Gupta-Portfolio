@@ -88,7 +88,7 @@ export default function Contact() {
                   <div>
                     <h3 className="font-display font-semibold">Location</h3>
                     <p className="text-muted-foreground text-sm mt-1">
-                      Based in San Francisco Bay Area, available for remote work globally.
+                      Based in India, Delhi NCR region, available for remote and freelance opportunities globally.
                     </p>
                   </div>
                 </div>
