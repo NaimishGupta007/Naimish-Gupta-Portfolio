@@ -3,9 +3,8 @@ import { Link } from 'wouter';
 
 const socialLinks = [
   { icon: Github, href: 'https://github.com/naimish', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com/in/naimish', label: 'LinkedIn' },
-  { icon: Twitter, href: 'https://twitter.com/naimish', label: 'Twitter' },
-  { icon: Mail, href: 'mailto:contact@naimish.dev', label: 'Email' },
+  { icon: Linkedin, href: 'https://linkedin.com/in/naimishgupta007', label: 'LinkedIn' },
+  { icon: Mail, href: 'naimishgupta007@gmail.com', label: 'Email' },
 ];
 
 const footerLinks = [
@@ -29,7 +28,7 @@ export function Footer() {
               <span className="font-display font-semibold text-lg">Naimish Gupta</span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-xs">
-              Machine Learning Engineer & AI Researcher specializing in computer vision, deep learning, and cutting-edge AI systems.
+              Machine Learning Engineer and AI Researcher with a focus on computer vision, deep learning, and applied AI systems.
             </p>
           </div>
 

@@ -8,8 +8,8 @@ import { projects } from '@/lib/data';
 const stats = [
   { label: 'Projects Completed', value: '8+' },
   { label: 'Patents & Papers', value: '4' },
-  { label: 'Years Experience', value: '5+' },
-  { label: 'GitHub Stars', value: '2.5k+' },
+  { label: 'Applied Learning years', value: '3+' },
+  { label: 'Cross-Domain Collaboration', value: '5+' },
 ];
 
 const expertise = [

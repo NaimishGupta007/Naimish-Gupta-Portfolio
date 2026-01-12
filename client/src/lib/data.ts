@@ -19,7 +19,7 @@ export interface Research {
   motivation: string;
   methodology: string;
   results: string;
-  status: 'Published' | 'Under Review' | 'Patent Granted' | 'Patent Pending';
+  status: 'Paper Accepted' | 'Under Review' | 'Patent Published' | 'Patent Pending';
   patentNumber?: string;
   pdfUrl?: string;
   type: 'paper' | 'patent';
@@ -46,12 +46,12 @@ export interface Resume {
 export const projects: Project[] = [
   {
     id: 'adas-deep-learning',
-    title: 'ADAS using Deep Learning',
+    title: 'AI-Powered Visibility Enhancement & Threat Scoring System for Vehicles',
     domain: 'CV',
-    shortDescription: 'Advanced Driver Assistance System leveraging deep neural networks for real-time object detection and lane tracking.',
+    shortDescription: 'Advanced Driver Assistance System leveraging deep neural networks for real-time image enhancement, object detecting and threat scoring.',
     problemStatement: 'Modern vehicles require intelligent systems that can perceive their environment in real-time to prevent accidents and assist drivers. Traditional computer vision methods struggle with varying lighting conditions and complex scenarios.',
     techStack: ['Python', 'TensorFlow', 'YOLO', 'OpenCV', 'CUDA', 'ROS'],
-    architecture: 'Multi-stage pipeline combining YOLOv5 for object detection, semantic segmentation for lane detection, and a sensor fusion module integrating LiDAR and camera data. The system runs at 30 FPS on NVIDIA Jetson.',
+    architecture: 'Multi-stage pipeline combining deep learning based image enhancement pipeline, YOLOv5 for object detection, semantic segmentation for lane detection, and a sensor fusion module integrating LiDAR and camera data. The system runs at 30 FPS on NVIDIA Jetson.',
     results: '98.2% object detection accuracy, 15ms average inference time, successfully deployed in test vehicles with zero false positives in 1000+ hours of testing.',
     githubUrl: 'https://github.com/naimish/adas-dl',
     videoUrl: 'https://youtube.com/watch?v=demo',
@@ -67,6 +67,7 @@ export const projects: Project[] = [
     architecture: 'Hierarchical detection system with UAV classification at the top level, followed by threat assessment and crowd density mapping. Uses temporal analysis for trajectory prediction.',
     results: '96.7% threat detection rate, 2-second average response time, successfully integrated with city emergency response systems.',
     githubUrl: 'https://github.com/naimish/aerial-threat',
+    videoUrl: 'https://youtube.com/watch?v=demo1',
     themeColor: '0 84% 60%'
   },
   {
@@ -92,6 +93,7 @@ export const projects: Project[] = [
     architecture: 'Attention-based neural network trained on cipher-plaintext pairs, with custom tokenization for binary data. Distributed training across GPU clusters.',
     results: 'Successfully identified weaknesses in reduced-round versions of classical ciphers, published findings in peer-reviewed security conference.',
     githubUrl: 'https://github.com/naimish/crypto-ml',
+    videoUrl: 'https://youtube.com/watch?v=demo3',
     themeColor: '262 83% 58%'
   },
   {
@@ -104,6 +106,7 @@ export const projects: Project[] = [
     architecture: 'Feature extraction from DNA sequences using k-mer analysis, ensemble classification with gradient boosting, and confidence calibration for uncertainty quantification.',
     results: '94.3% species-level accuracy on test dataset, 10x faster than traditional methods, deployed at 3 research institutions.',
     githubUrl: 'https://github.com/naimish/edna-ml',
+    videoUrl: 'https://youtube.com/watch?v=demo4',
     themeColor: '142 71% 45%'
   },
   {
@@ -115,7 +118,7 @@ export const projects: Project[] = [
     techStack: ['Python', 'TensorFlow', 'OpenPose', 'Keras', 'React', 'FastAPI'],
     architecture: 'Pose estimation pipeline with temporal modeling using LSTMs, anomaly detection for identifying deviations from healthy movement patterns.',
     results: '89% sensitivity for early Parkinson detection, 92% specificity, currently in clinical trials at partner hospitals.',
-    videoUrl: 'https://youtube.com/watch?v=demo3',
+    videoUrl: 'https://youtube.com/watch?v=demo5',
     themeColor: '340 82% 52%'
   },
   {
@@ -128,6 +131,7 @@ export const projects: Project[] = [
     architecture: 'Client-side computation with WebGL acceleration, reactive visualizations with D3, and TensorFlow.js for live model training visualization.',
     results: 'Used by 5000+ students, featured in university ML courses, open-source with 800+ GitHub stars.',
     githubUrl: 'https://github.com/naimish/ml-grapher',
+    videoUrl: 'https://youtube.com/watch?v=demo6',
     themeColor: '217 91% 60%'
   },
   {
@@ -140,6 +144,7 @@ export const projects: Project[] = [
     architecture: 'Meta-learning architecture based on MAML with custom few-shot learning heads. Distributed training with Ray for parallel task sampling.',
     results: '85% accuracy on novel threat types with only 5 examples, 10x faster adaptation than baseline fine-tuning approaches.',
     githubUrl: 'https://github.com/naimish/meta-threat',
+    videoUrl: 'https://youtube.com/watch?v=demo6',
     themeColor: '0 84% 60%'
   }
 ];
@@ -147,23 +152,23 @@ export const projects: Project[] = [
 export const research: Research[] = [
   {
     id: 'patent-adas',
-    title: 'Real-time Multi-sensor Fusion for Autonomous Navigation',
+    title: 'Real-Time Visibility Enhancement and Dynamic Threat Scoring System for Vehicles',
     abstract: 'A novel method for fusing LiDAR, camera, and radar data in real-time for autonomous vehicle navigation, achieving state-of-the-art performance in adverse weather conditions.',
     motivation: 'Existing sensor fusion methods struggle in rain, fog, and snow. Our approach uses learned attention weights to dynamically adjust sensor contributions based on environmental conditions.',
     methodology: 'Transformer-based architecture with cross-modal attention layers, trained on a custom dataset of 100,000+ annotated frames across various weather conditions.',
     results: '23% improvement in detection accuracy during adverse weather, 40% reduction in false positives compared to existing methods.',
-    status: 'Patent Granted',
-    patentNumber: 'US11,234,567',
+    status: 'Patent Published',
+    patentNumber: '20251109463',
     type: 'patent'
   },
   {
     id: 'paper-few-shot',
-    title: 'Few-Shot Learning for Security Threat Classification',
+    title: 'Model-Agnostic Meta-Learning for Performance Prediction, Risk Scoring, and Model Selection in Cyber Threat Detection',
     abstract: 'We present a meta-learning approach for rapidly adapting threat detection models to new attack vectors with minimal labeled examples.',
     motivation: 'Cybersecurity threats evolve faster than traditional ML pipelines can adapt. Our work addresses the critical need for models that can quickly learn to identify new threats.',
     methodology: 'Prototypical networks with task-specific embedding functions, combined with curriculum learning for improved generalization.',
     results: 'State-of-the-art performance on UNSW-NB15 and CICIDS2017 benchmarks, with 5-shot accuracy exceeding previous 50-shot methods.',
-    status: 'Published',
+    status: 'Paper Accepted',
     pdfUrl: 'https://arxiv.org/abs/example',
     type: 'paper'
   },
@@ -179,12 +184,12 @@ export const research: Research[] = [
   },
   {
     id: 'patent-ar-jewelry',
-    title: 'Augmented Reality System for Virtual Product Try-On',
-    abstract: 'A system and method for realistic virtual try-on of jewelry and accessories using advanced face tracking and physics-based rendering.',
-    motivation: 'E-commerce return rates for jewelry exceed 30%, largely due to inability to visualize products. Our invention addresses this through photorealistic AR rendering.',
+    title: 'Aerial Threat Detection & Crowd Dispersion using Deep Learning',
+    abstract: 'A adaptive AI system for real time UAV detection,aerial threat classification, predicting trajectory and point of impact, there by mitigating persistent aerial threats. The system further integrates real time crwod density mapping, smart navigation of safe routes for crowd evacuation during emergencies',
+    motivation: 'Traditially air defense system have numerous anamolies, our system is a realtime application the brideges these gaps efficiently.',
     methodology: 'Novel face mesh interpolation algorithm combined with PBR rendering pipeline optimized for mobile devices.',
     results: 'Sub-100ms latency on consumer smartphones, 40% reduction in return rates for pilot retailers.',
-    status: 'Patent Pending',
+    status: 'Patent Published',
     type: 'patent'
   }
 ];
@@ -247,6 +252,27 @@ export const resumes: Resume[] = [
     role: 'Research Scientist',
     description: 'Academic-focused resume highlighting publications and research experience.',
     downloadUrl: '/resumes/naimish-researcher.pdf'
+  },
+  {
+    id: 'data-science',
+    title: 'Data Scientist',
+    role: 'Extracting actionable insights.',
+    description: 'Transforming raw data into actionable business solutions.',
+    downloadUrl: '/resumes/naimish-dataScience.pdf'
+  },
+  {
+    id: 'data-analyst',
+    title: 'Data Analyst',
+    role: 'Finding data patterns.',
+    description: 'Interpreting complex datasets to provide clear, actionable insights for informed business decisions.',
+    downloadUrl: '/resumes/naimish-dataAnalyst.pdf'
+  },
+  {
+    id: 'cryptography',
+    title: 'Applied Cryptography Developer',
+    role: 'Implementing Secure Encryption Algorithms',
+    description: 'Cryptography developer building secure systems through hands-on, project-driven learning.',
+    downloadUrl: '/resumes/naimish-cryptography.pdf'
   }
 ];
 

@@ -8,11 +8,23 @@ import { research } from '@/lib/data';
 const filters = ['All', 'Papers', 'Patents'];
 
 const statusConfig = {
-  'Published': { icon: CheckCircle, color: 'text-green-600 dark:text-green-400 bg-green-500/10 border-green-500/20' },
-  'Under Review': { icon: Clock, color: 'text-yellow-600 dark:text-yellow-400 bg-yellow-500/10 border-yellow-500/20' },
-  'Patent Granted': { icon: Award, color: 'text-blue-600 dark:text-blue-400 bg-blue-500/10 border-blue-500/20' },
-  'Patent Pending': { icon: Clock, color: 'text-purple-600 dark:text-purple-400 bg-purple-500/10 border-purple-500/20' },
-};
+  'Paper Accepted': {
+    icon: CheckCircle,
+    color: 'text-green-600 dark:text-green-400 bg-green-500/10 border-green-500/20',
+  },
+  'Under Review': {
+    icon: Clock,
+    color: 'text-yellow-600 dark:text-yellow-400 bg-yellow-500/10 border-yellow-500/20',
+  },
+  'Patent Published': {
+    icon: Award,
+    color: 'text-blue-600 dark:text-blue-400 bg-blue-500/10 border-blue-500/20',
+  },
+  'Patent Pending': {
+    icon: Clock,
+    color: 'text-purple-600 dark:text-purple-400 bg-purple-500/10 border-purple-500/20',
+  },
+} as const;
 
 export default function Research() {
   const [activeFilter, setActiveFilter] = useState('All');

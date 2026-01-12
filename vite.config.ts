@@ -41,11 +41,15 @@ export default defineConfig({
     emptyOutDir: true,
   },
   server: {
-    host: "0.0.0.0",
-    allowedHosts: true,
-    fs: {
-      strict: true,
-      deny: ["**/.*"],
-    },
+  host: "0.0.0.0",
+  port: 5173,
+  strictPort: true,
+  hmr: false, // 🔥 THIS FIXES EVERYTHING
+
+  allowedHosts: true,
+  fs: {
+    strict: true,
+    deny: ["**/.*"],
   },
+},
 });

@@ -6,6 +6,8 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Layout } from '@/components/layout/Layout';
+import { supabase } from "@/lib/supabase";
+
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -14,12 +16,34 @@ export default function Contact() {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setFormData({ name: '', email: '', message: '' });
-  };
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault(); // page reload roko
+
+  setLoading(true);
+
+  const { error } = await supabase
+    .from('contacts') // 👈 Supabase table name
+    .insert({
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+    });
+
+  setLoading(false);
+
+  if (error) {
+    console.error('Supabase error:', error);
+    alert('❌ Message send nahi hua');
+    return;
+  }
+
+  // ✅ success
+  setSubmitted(true);
+  setFormData({ name: '', email: '', message: '' });
+};
+
 
   return (
     <Layout>
@@ -158,10 +182,10 @@ export default function Contact() {
                     />
                   </div>
 
-                  <Button type="submit" size="lg" className="w-full rounded-xl" data-testid="button-submit">
-                    <Send className="w-4 h-4 mr-2" />
-                    Send Message
+                  <Button type="submit" size="lg" className="w-full rounded-xl" disabled={loading}
+>                    <Send className="w-4 h-4 mr-2" />{loading ? 'Sending...' : 'Send Message'}
                   </Button>
+
                 </form>
               )}
             </motion.div>

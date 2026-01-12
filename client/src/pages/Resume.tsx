@@ -8,6 +8,9 @@ const roleIcons = {
   'ML Engineer': '🤖',
   'CV Engineer': '👁️',
   'Research Scientist': '🔬',
+  'Data Scientist': '👩‍💻',
+  'Data Analyst' : '📊',
+  'Applied Cryptography Developer' : '🔍'
 };
 
 export default function Resume() {
@@ -23,7 +26,7 @@ export default function Resume() {
             <h1 className="font-display text-4xl sm:text-5xl font-bold">Resume</h1>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
               Download my resume tailored to specific roles. Each version highlights relevant 
-              experience and skills for different positions in AI and machine learning.
+              work and skills for different positions in AI and machine learning.
             </p>
           </motion.div>
 
